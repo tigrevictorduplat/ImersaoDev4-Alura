@@ -1,0 +1,93 @@
+body {
+    font-family: "Roboto", monospace;
+    min-height: 400px;
+    background-image: url("https://avatars.githubusercontent.com/u/98099656?v=4");
+    background-color: #10002b;
+    background-size: 100vh;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+  }
+  .container {
+    text-align: center;
+    padding: 20px;
+    height: 100vh;
+  }
+  .page-title {
+    border-radius: 8px;
+    background-color: #c77dff;
+    color: #240046;
+    margin: 0 0 5px;
+  }
+  
+  .page-subtitle {
+    color: white;
+    border-radius: 8px;
+    background-color: #3c096c;
+    margin-top: 5px;
+  }
+  .escolha {
+    color: white;
+    border-radius: 8px;
+    margin-top: 5px;
+  }
+  select,
+  .input-destino {
+    position: relative;
+  }
+  .escolha::before {
+    content: "";
+    background-image: url(https://wallpaperaccess.com/full/1219599.jpg);
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.95;
+  }
+  
+  .page-logo {
+    width: 200px;
+  }
+  
+  .alura-logo {
+    width: 40px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  fieldset {
+    position: relative;
+    border-radius: 8px;
+    text-align: center;
+    width: auto;
+  }
+  
+  input {
+    margin: 12px;
+    padding: 6px;
+    border-radius: 5px;
+  }
+  
+  label,
+  legend {
+    color: #e0aaff;
+    background-color: #240046;
+    border-radius: 10px;
+  }
+  
+  button {
+    margin-top: 12px;
+    padding: 4px 8px;
+    border-radius: 10px;
+    background: #5a189a;
+    color: #ffffff;
+  }
+  
+  #valorConvertido {
+    font-size: 30px;
+    color: #10002b;
+    border-radius: 12px;
+    background-color: #7b2cbf;
+  }
+  

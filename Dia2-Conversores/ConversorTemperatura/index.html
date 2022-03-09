@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js"></script>
+    <title>Conversor de Temperaturas - ImersãoDev</title>
+</head>
+<body>
+<div class="container">
+    <img src="https://www.alura.com.br/assets/img/imersoes/dev-2021/logo-imersao-conversor-de-moedas.svg" class="page-logo" alt=""><br><br>
+    <h1 class="page-title">
+      Conversor de Temperaturas
+    </h1>
+    <p class="page-subtitle">
+      Descubra os valores de um Par de Temperaturas escolhido;
+    </p>
+    <fieldset>
+      <legend class="escolha">Escolha um Par de Temperaturas</legend>
+      <select id="par-temp" name="par-temp">
+        <option value="C-F" selected>Celcius-Farenheit</option>
+        <option value="F-C">Farenheit-Celcius</option>
+        <option value="C-K">Celcius-Kelvin</option>
+        <option value="K-C">Kelvin-Celcius</option>
+        <option value="F-K">Farenheit-Kelvin</option>
+      </select><br>
+      <fieldset>
+        <label for="temperatura">Insira o valor</label><br>
+        <input type="number" id="valor-escolhido" size="2" /><br>
+        <button type="submit" onclick="Converter()">Converter</button>
+        <h2 id="valorConvertido"></h2>
+  
+  </div>
+  <a href="https://alura.com.br/" target="_blank">
+    <img src="https://www.alura.com.br/assets/img/home/alura-logo.svg" alt="" class="alura-logo">
+</body>
+</html>
