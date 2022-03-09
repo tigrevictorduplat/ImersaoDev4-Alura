@@ -1,18 +1,18 @@
-# ImersaoDev4-Alura
+# Imersao Dev 4 - Alura :octocat:
  *Repositório para registrar os Exercícios feitos na Imersão Dev da Alura*
  ***
- Aqui nesse repositório estarei adcionando todos os meus projetos feitos na `Imersão Dev`, por mais simples que sejam, vejo como eles me fizeram progredir.
+ Aqui nesse repositório estarei adcionando todos os meus projetos feitos na `Imersão Dev`.Por mais simples que sejam, vejo como eles tem sido cruciais para minha evolução.
 
- ## As Atividades
+ ## As Atividades :open_file_folder:
 *Todos os trabalhos foram feitos na plataforma CodePen, portanto estarei deixando o link de todos eles aqui*
-### Dia 1 - Calculadora de Média
+### Dia 1 - Calculadora de Média :abacus:
 - [Calculadora de Média Aritimética](https://codepen.io/tigrevictorduplat/details/MWORzZE)
 *Nesse projeto aprendi um pouco mais sobre como os elementos do `HTML` se comunicam com o `JavaScript` e me aventurei em realizar algumas mudanças no desing do `CSS`*
 
-### Dia 2 - Conversores
-- [Conversor de Moedas](https://codepen.io/tigrevictorduplat/pen/NWwZjdy)
-- [Conversor de Temperatura](https://codepen.io/tigrevictorduplat/pen/mdqZQZv)
-- [Conversor de Anos Luz](https://codepen.io/tigrevictorduplat/pen/LYOKqep)
+### Dia 2 - Conversores :currency_exchange:
+- [Conversor de Moedas :coin:](https://codepen.io/tigrevictorduplat/pen/NWwZjdy)
+- [Conversor de Temperatura :snowflake:](https://codepen.io/tigrevictorduplat/pen/mdqZQZv)
+- [Conversor de Anos Luz :stars:](https://codepen.io/tigrevictorduplat/pen/LYOKqep)
 *Nesses projetos tive vários aprendizados, não só com `JavaScript` mas também `HTML` e `CSS`*
 
 **Exemplos**
