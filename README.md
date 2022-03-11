@@ -25,4 +25,10 @@ HTML | JavaScript | CSS
 `<button>`|`parseInt` e `parseFloat`|`filter: (Ypx)blur`
 ***
 Esses são alguns dos comandos novos que aprendi a usar e tive que me acostumar com durante esses projetos do Dia 2. Tive que passar por todo um processo de aprendizado de como usar pseudoelements só pra colocar essa imagem borrada no fundo.
-E admito, quando eu consegui realizar eu me senti imparável
+E admito, quando eu consegui realizar eu me senti imparável!
+
+***
+## Dia 3 - O Mentalista :brain:
+- [Jogo - Mentalista :crystal_ball:](https://codepen.io/tigrevictorduplat/pen/MWONrXv)
+***
+Nesse projeto aprendi a usar o `Math.random()` e descobri um pouco mais sobre o elemento `<button>`. Quanto ao *CSS* brinquei um pouco com as bordas no título e na estilização do botão quando desativado. O maior desafio nesse foi para implementar um sistema de tentativas efetivo com uma mensagem de Game Over que aparecesse no momento certo. Praticamente um dia tentando remontar a lógica do código na cabeça. Novamente, eu consegui!
