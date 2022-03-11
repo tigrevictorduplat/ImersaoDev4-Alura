@@ -1,0 +1,78 @@
+body {
+    font-family: "Courier New", monospace;
+    min-height: 600px;
+    background-image: url("https://wallpaperaccess.com/full/683976.jpg");
+    background-color: #000000;
+    background-size: cover;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+  }
+  
+  .container {
+    text-align: center;
+    padding: 20px;
+    height: 100vh;
+  }
+  
+  .page-title {
+    color: #020204;
+    background-color: #adebb8;
+    margin: 0 0 5px;
+    border-bottom-width: 10px;
+    border-bottom-color: #0e0e1b;
+    border-style: solid;
+  }
+  
+  .page-subtitle {
+    color: #def7e3;
+    background-color: #217e3f;
+    margin-top: 16px;
+  }
+  
+  .page-logo {
+    width: 200px;
+    background-color: #020204;
+  }
+  
+  .alura-logo {
+    width: 40px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  
+  @media (max-height: 500px) {
+    body {
+      min-height: 800px;
+    }
+  }
+  
+  input {
+    margin: 4px;
+    padding: 6px;
+    border-radius: 5px;
+  }
+  
+  button {
+    font-weight: bold;
+    margin-top: 12px;
+    padding: 4px 8px;
+    border-radius: 10px;
+    color: #020204;
+    background-color: #def7e3;
+  }
+  button:disabled {
+    color: #217e3f;
+    background-color: #172b22;
+  }
+  #nova-tentativa {
+    visibility: hidden;
+  }
+  
+  .resultado {
+    color: #def7e3;
+    background-color: #217e3f;
+    text-align: center;
+    margin-top: 16px;
+  }
+  
