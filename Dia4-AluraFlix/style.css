@@ -1,0 +1,25 @@
+body {
+    font-family: 'Major Mono Display', monospace;
+    background-image: url(https://wallpaperaccess.com/full/1259258.jpg);
+    background-size: 3645px, 2050px;
+    background-position: center top;
+    background-repeat: no-repeat;
+
+}
+
+h1{
+    text-align: center;
+    font-size: 75px;
+    color: #AED5EB;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 75px;
+    line-height: 75px;
+    display: flex;
+    align-items: center;
+    /* Neon Blue Shadow */
+    text-shadow: 2px 3px 4px rgba(174, 213, 235, 0.65);
+}
+.caixa-filmes{
+    
+}
