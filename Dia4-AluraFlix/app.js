@@ -10,7 +10,10 @@ function estruturaConcat(listaBanner) {
 }
 
 function AdicionarBanner() {
-  listaBanner.push(urlInput.value);
-  divDisplay.insertAdjacentHTML("beforeend", estruturaConcat(listaBanner));
-  indexBanner++;
-}
+    let check = listaBanner.includes(urlInput.value);
+    if (!check) {
+      listaBanner.push(urlInput.value);
+      divDisplay.insertAdjacentHTML("beforeend", estruturaConcat(listaBanner));
+      indexBanner++;
+    }
+  }
