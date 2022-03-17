@@ -2,20 +2,15 @@ var listaBanner = [];
 var indexBanner = 0;
 const urlInput = document.getElementById("display-text");
 const divDisplay = document.getElementById("display-banner");
-function estruturaConcat(url) {
-  /*
+function estruturaConcat(listaBanner) {
   const classeBanner = "novo-banner";
-  var concatString = "<img class=" + classeBanner + " src=" + url + ">";
-  return concatString;
-  */
-  const classeBanner = "novo-banner";
-  var concatString = "class=" + classeBanner + " src=" + url;
+  let concatString =
+    "<img class=" + classeBanner + " src=" + listaBanner[indexBanner] + ">";
   return concatString;
 }
 
 function AdicionarBanner() {
-  var newImg = divDisplay.createElement("img");
   listaBanner.push(urlInput.value);
-  newImg.appendChild(estruturaConcat(listaBanner[indexBanner]));
+  divDisplay.insertAdjacentHTML("beforeend", estruturaConcat(listaBanner));
   indexBanner++;
 }
