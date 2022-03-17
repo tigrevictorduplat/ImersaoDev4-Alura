@@ -1,25 +1,100 @@
 body {
-    font-family: 'Major Mono Display', monospace;
-    background-image: url(https://wallpaperaccess.com/full/1259258.jpg);
-    background-size: 3645px, 2050px;
+    font-family: "Major Mono Display", monospace;
+    text-align: center;
+    background-image: url("https://wallpaperaccess.com/full/1259258.jpg");
+    background-color: #000000;
+    background-size: cover;
     background-position: center top;
     background-repeat: no-repeat;
-
-}
-
-h1{
+  }
+  
+  .container {
     text-align: center;
+    padding: 20px;
+    position: relative;
+    background-color: rgba(14, 14, 27, 0.75);
+  }
+  .page-title {
     font-size: 75px;
-    color: #AED5EB;
+    color: #aed5eb;
     font-style: normal;
     font-weight: 400;
     font-size: 75px;
     line-height: 75px;
-    display: flex;
-    align-items: center;
     /* Neon Blue Shadow */
     text-shadow: 2px 3px 4px rgba(174, 213, 235, 0.65);
-}
-.caixa-filmes{
-    
-}
+    margin: 0 0 5px;
+  }
+  .display-text {
+    width: 100%;
+    display: block;
+    margin-top: 15px;
+    /* Text - Label */
+    font-family: "Abel";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 31px;
+    text-align: center;
+    align-items: center;
+    letter-spacing: -0.02em;
+    color: #aed5eb;
+    text-shadow: 0px 4px 4px #194621;
+    background: rgba(34, 105, 181, 0.25);
+    border: 2px solid #20227d;
+    /* Neon Blue Shadow */
+    box-shadow: 2px 3px 4px rgba(174, 213, 235, 0.65);
+  }
+  
+  .button-submit {
+    /* Button */
+    margin: auto;
+    display: block;
+    justify-content: center;
+    font-family: "Major Mono Display";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 24px;
+    align-items: center;
+    letter-spacing: -0.02em;
+    color: #dee2f7;
+    text-shadow: 0px 4px 4px #194621;
+    margin-top: 10px;
+    background: rgba(34, 105, 181, 0.25);
+    border: 2px solid #20227d;
+    /* Neon Blue Shadow */
+    box-shadow: 2px 3px 4px rgba(174, 213, 235, 0.65);
+  }
+  .novo-banner {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: auto;
+    border: 1px solid #aed5eb;
+    filter: drop-shadow(2px 3px 4px rgba(174, 213, 235, 0.65));
+  }
+  .page-subtitle {
+    color: #ffffff;
+    margin-top: 5px;
+  }
+  
+  .page-logo {
+    margin-top: 10px;
+    width: 200px;
+  }
+  
+  .alura-logo {
+    width: 40px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  
+  body > img {
+    margin: 0 10px;
+  }
+  
+  img {
+    max-height: 250px;
+  }
+  

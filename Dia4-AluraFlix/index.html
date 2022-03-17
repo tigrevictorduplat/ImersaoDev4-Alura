@@ -6,15 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Abel&family=Major+Mono+Display&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="app.js"></script>
     <title>TigerFlix</title>
 </head>
 <body>
-    <div>
-        <h1>AluraFlix</h1>
-        <input class="caixa-filmes" type="url">
-    </div>
+    <div class="container">
+        <h1 class="page-title">
+          Aluraflix
+        </h1>
+        <input id="display-text" class="display-text" type="text" placeholder="Adicione aqui, seus filmes favoritos_">
+        <button class="button-submit" type="submit" onclick="AdicionarBanner()">Adicionar</button>
+        <div id="display-banner"></div>
+        <img src="https://www.alura.com.br/assets/img/imersoes/dev-2021/logo-imersao-aluraflix.svg" class="page-logo" alt="">
+      </div>
+      <a href="https://alura.com.br/" target="_blank">
+        <img src="https://www.alura.com.br/assets/img/home/alura-logo.svg" alt="" class="alura-logo">
+      </a>
 </body>
 </html>
