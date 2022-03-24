@@ -20,8 +20,6 @@ function fabricaElemento(lista, conteudo) {
       "<h2 class=" + classeBanner + ">" + lista[indexBanner] + "</h2>";
     return concatString;
   }
-  console.log(concatString);
-  console.log(lista + "| |" + conteudo);
 }
 function empurrarElemento(lista, conteudo) {
   lista.push(conteudo);
@@ -39,7 +37,6 @@ function checarValidacaoBanner() {
       : false;
   // Termina com  .jpg ou .jpeg? => true
   let checkArray = listaBanner.includes(urlInputString);
-  console.log(checkUrl + " " + checkArray);
   let checkFinal = checkUrl && !checkArray ? true : false;
   // Termina com as extensões corretas e não está no Array? => true
   return checkFinal;
