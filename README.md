@@ -39,7 +39,11 @@ Nesse projeto aprendi a usar o `Math.random()` e descobri um pouco mais sobre o 
 ***
 Diferente dos últimos três dias, os dias 4 e 5 concentraram um único projeto: AluraFlix.
 O objetivo era criar uma interface onde os usuários pudessem adicionar os Banners/Posters de filmes (ou séries,animes,games,etc). A princípio parece algo simples, mas todos os desafios envolvendo `<input>`, `<button>` e `Arrays` foram tão imersivos que acabei me empolgando, estudando-os e tentando ir além do exercício.
+
 Tive um dia inteiro de estudo sobre a propriedade *`display`*(*CSS*) por exemplo, que me ajudaram no posicionamento dos banners 
+
 No fim, tive vários problemas de lógica a resolver e, apesar de haver bastante código, consegui condensar tudo em algumas `function()` e foi um processo bastante intrigante. Tive várias ideias que acabaram não entrando no código, mas que provavelmente aparecerão nos próximos projetos!
+
 Além de todos os aprendizados com os desafios, aprendi também a utilizar uma nova ferramenta, o [Figma :art:](figma.com) que me ajudou muito com relação às medidas e efeitos, como `box-shadow` e `text-shadow` que usei para aplicar um efeito de *Neon :bulb:*
+
 Enfim, acabei me empolgando e me dedicando tanto a esse projeto que não consegui acompanhar o ritmo da Imersão Dev, contudo isso não vai me impedir de continuar com os projetos! Vou fazê-los no meu tempo e me dedicando o máximo que posso a eles!
