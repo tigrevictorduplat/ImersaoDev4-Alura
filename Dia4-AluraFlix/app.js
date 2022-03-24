@@ -1,13 +1,20 @@
+// Listas para Armazenar as URLs, os Titulos e para Acompanhar o Index dos Titulos
 var listaBanner = []; 
 var listaTitulo = [];
 var rastreadorDeleteIndex = [0];
 var indexBanner = 0;
+// Inicializando variáveis que receberão .values
 var bannerTituloString = "";
 var urlInputString = "";
-const urlInput = document.querySelector("#display-text");
+// Conectando variáveis a elementos do HTML
+  //Inputs
+const urlInput = document.querySelector("#display-text"); 
 const bannerTitulo = document.querySelector("#display-name");
+  //Divs
 const divDisplay = document.getElementById("display-banner");
 const divDelete = document.getElementById("delete-field");
+/* Funções */
+  // Utilizada para instanciar <img> e <h2> 
 function fabricaElemento(lista, conteudo) {
   if (conteudo.endsWith(".jpg") || conteudo.endsWith(".jpeg")) {
     const classeBanner = "novo-banner";
@@ -20,13 +27,13 @@ function fabricaElemento(lista, conteudo) {
       "<h2 class=" + classeBanner + ">" + lista[indexBanner] + "</h2>";
     return concatString;
   }
-  console.log(concatString);
-  console.log(lista + "| |" + conteudo);
 }
+  // Utilizada para adicionar os elementos fabricados na `fabricaElemento()`
 function empurrarElemento(lista, conteudo) {
   lista.push(conteudo);
   divDisplay.insertAdjacentHTML("beforeend", fabricaElemento(lista, conteudo));
 }
+  //Checa repetições, para evitar Titulos e Banners repetidos
 function checarTitulo() {
   let checkArray = listaTitulo.includes(bannerTituloString);
   let checkFinal = !checkArray ? true : false;
@@ -44,6 +51,7 @@ function checarValidacaoBanner() {
   // Termina com as extensões corretas e não está no Array? => true
   return checkFinal;
 }
+  //Função chamada pelo botão Adicionar, ela recebe os Inputs de URL e Titulo e Empurra ambos no Div Display 
 function adicionarBanner() {
   urlInputString = urlInput.value;
   bannerTituloString = bannerTitulo.value;
@@ -57,6 +65,7 @@ function adicionarBanner() {
     bannerTitulo.value = "";
   }
 }
+  //Função chamada pelo botão Deletar, recebe o Input do Deletar com a posição do filme (1°, 2° 3°), excluindo junto a ele o Titulo
 function deletarBanner() {
   let inputDelete = document.querySelector("#input-delete");
   let indexDelete = inputDelete.value - 1;
@@ -71,9 +80,11 @@ function deletarBanner() {
   ativarDelete();
   indexBanner--;
 }
+  // Checa se existe algum elemento adicionado, se não, o bloco do Delete é escondido
 function ativarDelete() {
   divDelete.hidden = listaBanner.length == 0 ? true : false;
 }
+  // Acompanha a posição dos Banners no Div Display
 function acompanharIndexDelete() {
   let proximoNum = rastreadorDeleteIndex[indexBanner] + 2;
   rastreadorDeleteIndex.push(proximoNum);
