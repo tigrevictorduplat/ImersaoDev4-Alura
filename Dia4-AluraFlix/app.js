@@ -1,5 +1,4 @@
 var listaBanner = [];
-var imgTagBanner = []; 
 var indexBanner = 0;
 var urlInputString = "";
 const urlInput = document.querySelector("#display-text");
@@ -24,12 +23,7 @@ function AdicionarBanner() {
 function estruturaConcat(listaBanner) {
   const classeBanner = "novo-banner";
   let concatString =
-    "<img class=" +
-    classeBanner +
-    " src=" +
-    listaBanner[indexBanner] +
-    ">";
-  imgTagBanner[indexBanner] = concatString
+    "<img class=" + classeBanner + " src=" + listaBanner[indexBanner] + ">";
   return concatString;
 }
 function checarValidacaoBanner() {
@@ -48,11 +42,10 @@ function checarValidacaoBanner() {
 function deletarBanner() {
   let inputDelete = document.querySelector("#input-delete");
   let indexDelete = inputDelete.value - 1;
-  let elementoDeletado = document.getElementById(idString);
+  let elementoDeletado = document.getElementById("display-banner");
   listaBanner.splice(indexDelete, 1);
-  elementoDeletado.remove();
+  elementoDeletado.children[indexDelete].remove();
   inputDelete.value = "";
   ativarDelete();
   indexBanner--;
 }
-
