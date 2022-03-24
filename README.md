@@ -37,7 +37,7 @@ Nesse projeto aprendi a usar o `Math.random()` e descobri um pouco mais sobre o 
 ## Dia 4 e 5 - AluraFlix :clapper:
 - [Banco de Imagens - AluraFlix :vhs:](https://codepen.io/tigrevictorduplat/full/XWVWKqr)
 ***
-Diferente dos últimos três dias, os dias 4 e 5 concentraram um único projeto: AluraFlix.
+Diferente dos últimos três desafios, os desafios 4 e 5 concentraram um único projeto: AluraFlix.
 O objetivo era criar uma interface onde os usuários pudessem adicionar os Banners/Posters de filmes (ou séries,animes,games,etc). A princípio parece algo simples, mas todos os desafios envolvendo `<input>`, `<button>` e `Arrays` foram tão imersivos que acabei me empolgando, estudando-os e tentando ir além do exercício.
 
 Tive um dia inteiro de estudo sobre a propriedade *`display`*(*CSS*) por exemplo, que me ajudaram no posicionamento dos banners 
