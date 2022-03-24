@@ -93,6 +93,16 @@ body {
   border: 1px solid #aed5eb;
   filter: drop-shadow(2px 3px 4px rgba(174, 213, 235, 0.65));
 }
+.nova-legenda {
+  font-style: normal;
+  font-weight: 400;
+  line-height: 75px;
+  margin: 10px 5px;
+  color: #80bbcf;
+  /*filter: drop-shadow(2px 3px 4px rgba(28, 15, 26, 0.65));*/
+  /* Neon Blue Shadow */
+  text-shadow: 2px 3px 4px rgba(174, 213, 235, 0.65);
+}
 .page-subtitle {
   color: #ffffff;
   margin-top: 5px;
