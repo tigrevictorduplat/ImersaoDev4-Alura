@@ -19,7 +19,7 @@ var baseCriatura = {
       custoMana: " "
     }
   };
-  var listaCriaturas = [{ baseCriatura }];
+  var listaCriaturas = [{ ...baseCriatura }];
   var estruturaTabelaHTML = [];
   var contadorCriatura = 0;
   const elementoTabela = document.getElementById("tabelaEncontros");
@@ -87,11 +87,13 @@ var baseCriatura = {
     return listaInputs;
   }
   function limparInputDialog() {
+    document.getElementById("nivel-criatura").value = " ";
     document.getElementById("nome-arma").value = " ";
     document.getElementById("bonus-ataque").value = " ";
     document.getElementById("num-dados").value = " ";
     document.getElementById("dado-arma").value = " ";
     document.getElementById("titulo-habilidade").value = " ";
+    document.getElementById("custo-pms").value = " ";
     document.getElementById("efeito-habilidade").value = " ";
   }
   function transferirInputsTabelaParaLista() {
@@ -111,31 +113,55 @@ var baseCriatura = {
     document.getElementById("novo-pvs").value = " ";
     document.getElementById("novo-pms").value = " ";
   }
-  function adicionarCriatura() {
-    if (contadorCriatura != 0) {
-      listaCriaturas.push({});
-    } else {
-      listaCriaturas[0] = baseCriatura;
-    }
+  function adicionarExtrasInput() {
+    let listaInputsDg = transferirInputsDialogParaLista();
+    limparInputDialog();
+    let i = 0;
+    let l = contadorCriatura;
+    listaCriaturas[l].nivelCriatura = listaInputsDg[i];
+    i++;
+    listaCriaturas[l].armaCriatura.nomeArma = listaInputsDg[i];
+    i++;
+    listaCriaturas[l].ataqueCriatura = listaInputsDg[i];
+    i++;
+    listaCriaturas[l].numDadosDano = listaInputsDg[i];
+    i++;
+    listaCriaturas[l].armaCriatura.tipoDadosDano = listaInputsDg[i];
+    i++;
+    listaCriaturas[l].habilidadeCriatura.tituloHabilidade = listaInputsDg[i];
+    i++;
+    listaCriaturas.habilidadeCriatura.custoMana = listaInputsDg[i];
+    i++;
+    listaCriaturas.habilidadeCriatura.efeitoHabilidade = listaInputsDg[i];
+  }
+  function adicionarTableInput() {
     let listaInputsTb = transferirInputsTabelaParaLista();
     limparInputTabela();
     let i = 0;
     let l = contadorCriatura;
     listaCriaturas[l].nomeCriatura = listaInputsTb[i];
-    listaCriaturas[l].i++;
+    i++;
     listaCriaturas[l].iniciativaCriatura = listaInputsTb[i];
     i++;
     listaCriaturas[l].defesaCriatura = listaInputsTb[i];
     i++;
     listaCriaturas[l].pontosVidaCriatura = listaInputsTb[i];
     listaCriaturas[l].pontosVidaAtuais = listaInputsTb[i];
-    i++;
     atualizarEstado(l);
     listaCriaturas[l].pontosManaCriatura = listaInputsTb[i];
+  }
+  function adicionarCriatura() {
+    if (contadorCriatura != 0) {
+      listaCriaturas.push({ ...baseCriatura });
+    }
     contadorCriatura++;
-    console.log("Pop-Up");
     controlDialog();
-    console.log("Pop-Down");
+    let checaDialog = false;
+    while (!checaDialog) {
+      checaDialog = elementoDialog.open ? true : false;
+    }
+    adicionarTableInput();
+    adicionarExtrasInput();
     atualizarTabela(listaCriaturas);
   }
   
