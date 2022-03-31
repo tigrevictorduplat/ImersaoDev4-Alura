@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Encontros Aleatórios</title>
     <link rel="stylesheet" href="style.css">
-    <script src="app.js"></script>
 </head>
 <body>
     <div class="page-container">
@@ -14,70 +13,88 @@
       <div class="table-container">
         <table>
           <thead>
-            <tr>
-              <th>Nome</th>
-              <th>Iniciativa</th>
-              <th>Defesa</th>
-              <th>Estado</th>
-              <th>PVs</th>
-              <th>PMs</th>
-              <th colspan="3">Ações</th>
-            </tr>
-            <tr>
-              <td class='nome-criatura'><input id="novo-nome" class="campo-novo" type="text"></td>
-              <td><input id="nova-iniciativa" class="campo-novo" type="text"></td>
-              <td><input id="nova-defesa" class="campo-novo" type="text"></td>
-              <td>--</td>
-              <td><input id="novo-pvs" class="campo-novo" type="text"></td>
-              <td><input id="novo-pms" class="campo-novo" type="text"></td>
-              <td colspan="3"><button onclick="adicionarCriatura()">Adicionar</button></td>
-            </tr>
-          </thead>
-          <tbody id="tabelaEncontros"></tbody>
-        </table>
-        <dialog id="janela-info">
-          <h2>Informações Adicionais</h2>
-          <form method="dialog">
-            <fieldset id="nivelCriatura">
-              <label>Nível</label>
-              <input type="number" id="nivel-criatura" name="nivel-criatura" min="1" max="20">
-            </fieldset>
-            <fieldset id="extra-atributos">
-              <legend>Bônus Numéricos</legend>
-              <label>Arma</label>
-              <input type="text" id="nome-arma" name="nome-arma" placeholder="Nome da Arma">
-              <br>
-              <label>Ataque</label>
-  
-              <input type="number" id="bonus-ataque" name="bonus-ataque" min="0" placeholder="Bônus de Ataque">
-              <br>
-              <label for="dado-arma">Dados de Dano</label>
-              <input type="number" min="1" id="num-dados" name="num-dados">
-              <select id="dado-arma" name="dado-arma">
-                <option value="4">d4</option>
-                <option value="6">d6</option>
-                <option value="8">d8</option>
-                <option value="12">d12</option>
-              </select>
-            </fieldset>
-            <fieldset id="extra-habilidades">
-              <legend>Habilidades</legend>
-  
-              <label>Titulo</label>
-              <br>
-              <input type="text" id="titulo-habilidade" name="titulo-habiliade">
-              <br>
-              <label>Custo em PMs</label>
-              <br>
-              <input type="number" min="1" id="custo-pms" name="custo-pms">
-              <br>
-              <label for="efeito-habilidade">Efeito</label>
-              <br>
-              <textarea id="efeito-habilidade" name="efeito-habiliade" cols="50" rows="5" placeholder="Descreva a Habilidade aqui..."></textarea>
-            </fieldset>
+              <tr>
+                <th>Nome</th>
+                <th>Iniciativa</th>
+                <th>Defesa</th>
+                <th>Estado</th>
+                <th>PVs</th>
+                <th>PMs</th>
+                <th colspan="3">Ações</th>
+              </tr>
+              <tr>
+                <td class='nome-criatura'><input id="novo-nome" class="campo-novo" type="text"></td>
+                <td><input id="nova-iniciativa" class="campo-novo" type="text"></td>
+                <td><input id="nova-defesa" class="campo-novo" type="text"></td>
+                <td>--</td>
+                <td><input id="novo-pvs" class="campo-novo" type="text"></td>
+                <td><input id="novo-pms" class="campo-novo" type="text"></td>
+                <td colspan="3"><button onclick="adicionarCriatura()">Adicionar</button></td>
+              </tr>
+            </thead>
+            <tbody id="tabelaEncontros"></tbody>
+          </table>
+      </div>
+    <div class="janela-dialogo">
+      <dialog id="janela-info">
+        <h2>Informações Adicionais</h2>
+          <form class="extrainfo" method="dialog">
+            <div class="div-nivel">
+              <fieldset id="nivelCriatura">
+            
+                <label>Nível</label>
+                <input type="number" id="nivel-criatura" name="nivel-criatura" min="1" max="20"> 
+              </fieldset>
+            </div>
+            <div class="div-atributos">   
+              <fieldset id="extra-atributos">
+                <legend>Bônus Numéricos</legend>
+                <div class="div-nome-arma">
+                  <label>Arma</label>
+                  <input type="text" id="nome-arma" name="nome-arma" placeholder="Nome da Arma">
+                </div>
+                <div class="div-ataque-arma">
+                  <label for="bonus-ataque">Ataque</label>
+                  <input type="number" id="bonus-ataque" name="bonus-ataque" min="0" placeholder="Bônus de Ataque">
+                </div>
+                <div class="div-dano-arma">
+                  <label for="dado-arma">Dados de Dano</label>
+                  <input type="number" min="1" id="num-dados" name="num-dados">
+                  <select id="dado-arma" name="dado-arma">
+                    <option value="4">d4</option>
+                    <option value="6">d6</option>
+                    <option value="8">d8</option>
+                    <option value="12">d12</option>
+                  </select>
+                </div>
+              </fieldset>
+            </div>
+            <div class="div-habilidades"> 
+              <fieldset id="extra-habilidades">
+                <div class="div-titulo">
+                  <legend>Habilidades</legend>
+                  <label for="titulo-habilidade">Titulo</label>
+                  <br>
+                  <input type="text" id="titulo-habilidade" name="titulo-habiliade">
+                </div> 
+                <div class="div-custo">
+                  <label for="custo-pms">Custo em PMs</label>
+                  <br>
+                  <input type="number" min="1" id="custo-pms" name="custo-pms">
+                </div>
+                <div class="div-efeito">
+                  <label for="efeito-habilidade">Efeito</label>
+                  <br>
+                  <textarea id="efeito-habilidade" name="efeito-habiliade" cols="50" rows="5" placeholder="Descreva a Habilidade aqui...">
+                  </textarea>
+                </div>
+              </fieldset>
+            </div>
+            <button type="submit">Enviar</button>
           </form>
         </dialog>
-      </div>
+        </div>
     </div>
+    <script src="app.js"></script>
   </body>
   </html>
