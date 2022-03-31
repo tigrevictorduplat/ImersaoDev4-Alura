@@ -37,7 +37,6 @@ const baseCriatura = {
   set pontosManaCriatura(novosPMs) {
     this.pontosManaCriatura = novosPMs;
   },
-
   set nivelCriatura(novoNivel) {
     this.nivelCriatura = novoNivel;
   },
@@ -63,92 +62,23 @@ const baseCriatura = {
     this.habilidadeCriatura.efeitoHabilidade = novoEfeitoHabilidade;
   }
 };
-var listaCriaturas = [
-  {
-    ...baseCriatura
-  }
-];
+//Inicializando Variáveis
+var listaCriaturas = [];
 var estruturaTabelaHTML = [];
 var contadorCriatura = 0;
 const elementoTabela = document.getElementById("tabelaEncontros"),
   elementoDialog = document.getElementById("janela-info"),
   elementoForm = elementoDialog.querySelectorAll(".extrainfo"),
-  submitInput = elementoForm[0].querySelector(`button[type="submit"]`);
+  submitInput = elementoForm[0].querySelector(`input[type="submit"]`);
 //Adicionando Eventos
-
+submitInput.addEventListener("click", adicionarExtrasInput);
 // Funções
-function adicionarTableInput() {
-  let listaInputsTb = transferirInputsTabelaParaLista();
-  limparInputTabela();
-  let i = 0;
-  let l = contadorCriatura;
-  listaCriaturas[l].nomeCriatura = listaInputsTb[i];
-  i++;
-  listaCriaturas[l].iniciativaCriatura = listaInputsTb[i];
-  i++;
-  listaCriaturas[l].defesaCriatura = listaInputsTb[i];
-  i++;
-  listaCriaturas[l].pontosVidaCriatura = listaInputsTb[i];
-  listaCriaturas[l].pontosVidaAtuais = listaInputsTb[i];
-  atualizarEstado(l);
-  listaCriaturas[l].pontosManaCriatura = listaInputsTb[i];
-}
-function adicionarExtrasInput() {
-  let listaInputsDg = transferirInputsDialogParaLista();
-  limparInputDialog();
-  let i = 0;
-  let l = contadorCriatura;
-  listaCriaturas[l].nivelCriatura = listaInputsDg[i];
-  i++;
-  listaCriaturas[l].nomeArma = listaInputsDg[i];
-  i++;
-  listaCriaturas[l].ataqueCriatura = listaInputsDg[i];
-  i++;
-  listaCriaturas[l].numDadosDano = listaInputsDg[i];
-  i++;
-  listaCriaturas[l].tipoDadosDano = listaInputsDg[i];
-  i++;
-  listaCriaturas[l].tituloHabilidade = listaInputsDg[i];
-  i++;
-  listaCriaturas[l].custoMana = listaInputsDg[i];
-  i++;
-  listaCriaturas[l].efeitoHabilidade = listaInputsDg[i];
-}
-function adicionarCriatura() {
-  if (contadorCriatura != 0) {
-    listaCriaturas.push({ ...baseCriatura });
-  }
-  controlDialog();
-  let checaDialog = false;
-  while (!checaDialog) {
-    checaDialog = elementoDialog.open ? true : false;
-  }
-  adicionarTableInput();
-  adicionarExtrasInput();
-  atualizarTabela(listaCriaturas);
-  contadorCriatura++;
-}
 function controlDialog() {
   if (elementoDialog.open) {
     elementoDialog.close();
   } else {
     elementoDialog.showModal();
   }
-}
-function declaraEstrutura(index) {
-  estruturaTabelaHTML = [
-    "<tr>",
-    `<td class='nome-criatura'> ${listaCriaturas[index].nomeCriatura} </td>`,
-    `<td>${listaCriaturas[index].iniciativaCriatura}</td>`,
-    `<td>${listaCriaturas[index].defesaCriatura}</td>`,
-    `<td>${listaCriaturas[index].estadoCriatura}</td>`,
-    `<td>${listaCriaturas[index].pontosVidaCriatura}</td>`,
-    `<td>${listaCriaturas[index].pontosManaCriatura}</td>`,
-    `<td><button onClick="acaoAtacar(${index})">Ataque</button></td>`,
-    `<td><button onClick="acaoHabilidade(${index})">Habilidade</button></td>`,
-    `<td><button onClick="derrotarInimigo(${index})">Derrota</button></td>`,
-    "</tr>"
-  ];
 }
 function transferirInputsDialogParaLista() {
   let listaInputs = [
@@ -190,16 +120,20 @@ function limparInputTabela() {
   document.getElementById("novo-pvs").value = " ";
   document.getElementById("novo-pms").value = " ";
 }
-function atualizarTabela(lista) {
-  elementoTabela.innerHTML = lista.length == 0 ? " " : NaN;
-  let stringEstruturaTabelaHTML = "";
-  for (var k = 0; k < lista.length; k++) {
-    declaraEstrutura(k);
-    for (var i = 0; i < estruturaTabelaHTML.length; i++) {
-      stringEstruturaTabelaHTML += estruturaTabelaHTML[i];
-    }
-    elementoTabela.innerHTML = stringEstruturaTabelaHTML;
-  }
+function declaraEstrutura(index) {
+  estruturaTabelaHTML = [
+    "<tr>",
+    `<td class='nome-criatura'> ${listaCriaturas[index].nomeCriatura} </td>`,
+    `<td>${listaCriaturas[index].iniciativaCriatura}</td>`,
+    `<td>${listaCriaturas[index].defesaCriatura}</td>`,
+    `<td>${listaCriaturas[index].estadoCriatura}</td>`,
+    `<td>${listaCriaturas[index].pontosVidaCriatura}</td>`,
+    `<td>${listaCriaturas[index].pontosManaCriatura}</td>`,
+    `<td><button onClick="acaoAtacar(${index})">Ataque</button></td>`,
+    `<td><button onClick="acaoHabilidade(${index})">Habilidade</button></td>`,
+    `<td><button onClick="derrotarInimigo(${index})">Derrota</button></td>`,
+    "</tr>"
+  ];
 }
 function atualizarEstado(indexCriatura) {
   let estado = "";
@@ -216,7 +150,61 @@ function atualizarEstado(indexCriatura) {
   }
   listaCriaturas[indexCriatura].estadoCriatura = estado;
 }
-
+function atualizarTabela(lista) {
+  elementoTabela.innerHTML = lista.length == 0 ? " " : NaN;
+  let stringEstruturaTabelaHTML = "";
+  for (var k = 0; k < lista.length; k++) {
+    declaraEstrutura(k);
+    for (var i = 0; i < estruturaTabelaHTML.length; i++) {
+      stringEstruturaTabelaHTML += estruturaTabelaHTML[i];
+    }
+    elementoTabela.innerHTML = stringEstruturaTabelaHTML;
+  }
+}
+function adicionarTableInput() {
+  let listaInputsTb = transferirInputsTabelaParaLista();
+  limparInputTabela();
+  let i = 0;
+  let l = contadorCriatura;
+  listaCriaturas[l].nomeCriatura = listaInputsTb[i];
+  i++;
+  listaCriaturas[l].iniciativaCriatura = listaInputsTb[i];
+  i++;
+  listaCriaturas[l].defesaCriatura = listaInputsTb[i];
+  i++;
+  listaCriaturas[l].pontosVidaCriatura = listaInputsTb[i];
+  listaCriaturas[l].pontosVidaAtuais = listaInputsTb[i];
+  atualizarEstado(l);
+  listaCriaturas[l].pontosManaCriatura = listaInputsTb[i];
+}
+function adicionarExtrasInput() {
+  let listaInputsDg = transferirInputsDialogParaLista();
+  limparInputDialog();
+  let i = 0;
+  let l = contadorCriatura;
+  listaCriaturas[l].nivelCriatura = listaInputsDg[i];
+  i++;
+  listaCriaturas[l].armaCriatura.nomeArma = listaInputsDg[i];
+  i++;
+  listaCriaturas[l].ataqueCriatura = listaInputsDg[i];
+  i++;
+  listaCriaturas[l].armaCriatura.numDadosDano = listaInputsDg[i];
+  i++;
+  listaCriaturas[l].armaCriatura.tipoDadosDano = listaInputsDg[i];
+  i++;
+  listaCriaturas[l].habilidadeCriatura.tituloHabilidade = listaInputsDg[i];
+  i++;
+  listaCriaturas[l].habilidadeCriatura.custoMana = listaInputsDg[i];
+  i++;
+  listaCriaturas[l].habilidadeCriatura.efeitoHabilidade = listaInputsDg[i];
+  contadorCriatura++;
+}
+function adicionarCriatura() {
+  listaCriaturas.push({ ...baseCriatura });
+  controlDialog();
+  adicionarTableInput();
+  atualizarTabela(listaCriaturas);
+}
 function acaoAtacar(i) {}
 function acaoHabilidade(i) {}
 function derrotarInimigo(i) {
