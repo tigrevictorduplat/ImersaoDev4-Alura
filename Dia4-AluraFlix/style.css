@@ -6,12 +6,32 @@ body {
   background-position: center top;
   background-repeat: no-repeat;
 }
+.nav-bar {
+  height: 2em;
+  padding: 0.3em;
+  display: flex;
+  background-color: black /*#170f10*/;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
 
+.alura-logo {
+  width: 40px;
+}
+.mygithub-logo {
+  width: 40px;
+}
+.page-logo {
+  width: 200px;
+  height: 100%;
+}
 .container {
   text-align: center;
-  padding: 20px;
+  padding: 1.5em;
   position: relative;
   background-color: rgba(14, 14, 27, 0.75);
+  border-top: 0.05em solid rgba(174, 213, 235, 0.65);
 }
 .page-title {
   font-size: 75px;
@@ -106,20 +126,6 @@ body {
 .page-subtitle {
   color: #ffffff;
   margin-top: 5px;
-}
-
-.page-logo {
-  width: 80px;
-  position: absolute;
-  top: 15px;
-  left: 15px;
-}
-
-.alura-logo {
-  width: 40px;
-  position: absolute;
-  top: 15px;
-  right: 15px;
 }
 
 body > img {
