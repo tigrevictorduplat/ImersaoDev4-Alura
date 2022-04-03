@@ -18,55 +18,13 @@ const baseCriatura = {
     tituloHabilidade: "",
     efeitoHabilidade: " ",
     custoMana: " "
-  },
-  set novoNome(novoNome) {
-    this.nomeCriatura = novoNome;
-  },
-  set iniciativaCriatura(novaIniciativa) {
-    this.iniciativaCriatura = novaIniciativa;
-  },
-  set defesaCriatura(novaDefesa) {
-    this.defesaCriatura = novaDefesa;
-  },
-  set pontosVidaCriatura(novosPVs) {
-    this.pontosVidaCriatura = novosPVs;
-  },
-  set estadoCriatura(novoEstadoCriatura) {
-    this.estadoCriatura = novoEstadoCriatura;
-  },
-  set pontosManaCriatura(novosPMs) {
-    this.pontosManaCriatura = novosPMs;
-  },
-  set nivelCriatura(novoNivel) {
-    this.nivelCriatura = novoNivel;
-  },
-  set ataqueCriatura(novoAtaque) {
-    this.ataqueCriatura = novoAtaque;
-  },
-  set nomeArma(novoNomeArma) {
-    this.armaCriatura.nomeArma = novoNomeArma;
-  },
-  set numDadosDano(novoNumDados) {
-    this.armaCriatura.numDadosDano = novoNumDados;
-  },
-  set tipoDadosDano(novoTipoDado) {
-    this.armaCriatura.tipoDadosDano = novoTipoDado;
-  },
-  set tituloHabilidade(novoTituloHabilidade) {
-    this.habilidadeCriatura.tituloHabilidade = novoTituloHabilidade;
-  },
-  set custoMana(novoCustoMana) {
-    this.habilidadeCriatura.custoMana = novoCustoMana;
-  },
-  set efeitoHabilidade(novoEfeitoHabilidade) {
-    this.habilidadeCriatura.efeitoHabilidade = novoEfeitoHabilidade;
   }
 };
 //Inicializando Variáveis
 var listaCriaturas = [];
 var estruturaTabelaHTML = [];
 var contadorCriatura = 0;
-const elementoTabela = document.getElementById("tabelaEncontros"),
+const elementoTabela = document.getElementById("tabela-encontros"),
   elementoDialog = document.getElementById("janela-info"),
   elementoForm = elementoDialog.querySelectorAll(".extrainfo"),
   submitInput = elementoForm[0].querySelector(`input[type="submit"]`);
