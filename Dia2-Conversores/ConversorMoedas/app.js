@@ -1,5 +1,5 @@
 function Converter() {
-    var parMoedaEscolhido = document.getElementById("par-moeda").value;
+    const parMoedaEscolhido = document.getElementById("par-moeda").value;
     var moedaHoje;
     var cifraMoeda;
     switch (parMoedaEscolhido) {

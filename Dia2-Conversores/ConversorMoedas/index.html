@@ -18,28 +18,33 @@
       <img src="https://avatars.githubusercontent.com/u/98099656?v=4" alt="" class="mygithub-logo">
     </a>
   </header>
-  <div class="container">
+  <main class="container">
     <h1 class="page-title">
       Conversor de Moedas
     </h1>
     <p class="page-subtitle">
       Descubra os valores de um Par de Moedas escolhido
     </p>
-    <fieldset class="campos-selecao">
-      <legend class="escolha">Escolha um Par de Moedas</legend>
-      <select id="par-moeda" name="par-moeda">
-        <option value="RS-US" selected>Real-Dolar</option>
-        <option value="US-RS">Dolar-Real</option>
-        <option value="RS-EU">Real-Euro</option>
-        <option value="EU-US">Euro-Dolar</option>
-        <option value="RS-KW">Real-Kwanzas</option>
-        <option value="RS-BTC">Real-Bitcoin</option>
-      </select><br>
-      <fieldset class="campo-valor">
-        <label for="moeda">Insira o valor</label><br>
-        <input type="number" id="valor-escolhido" size="2" /><br>
-        <button type="submit" onclick="Converter()">Converter</button>
-        <h2 id="valorConvertido"></h2>
-  </div>
+    <div class="campos-selecao">
+      <fieldset>
+        <legend class="escolha">Escolha um Par de Moedas</legend>
+        <select id="par-moeda" name="par-moeda">
+          <option value="RS-US" selected>Real-Dolar</option>
+          <option value="US-RS">Dolar-Real</option>
+          <option value="RS-EU">Real-Euro</option>
+          <option value="EU-US">Euro-Dolar</option>
+          <option value="RS-KW">Real-Kwanzas</option>
+          <option value="RS-BTC">Real-Bitcoin</option>
+        </select><br>
+        <fieldset class="campo-valor">
+          <label for="moeda">Insira o valor</label><br>
+          <input type="number" id="valor-escolhido" size="2" /><br>
+          <button type="submit" onclick="Converter()">Converter</button>
+          <h2 id="valorConvertido"></h2>
+        </fieldset>
+      </fieldset>
+    </div>
+  
+  </main>
 </body>
 </html>
