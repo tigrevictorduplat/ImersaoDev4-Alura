@@ -9,7 +9,7 @@
     <title>Conversor de Temperaturas - ImersãoDev</title>
 </head>
 <body>
-<div class="container">
+  <div class="container">
     <img src="https://www.alura.com.br/assets/img/imersoes/dev-2021/logo-imersao-conversor-de-moedas.svg" class="page-logo" alt=""><br><br>
     <h1 class="page-title">
       Conversor de Temperaturas
@@ -17,8 +17,8 @@
     <p class="page-subtitle">
       Descubra os valores de um Par de Temperaturas escolhido;
     </p>
-    <fieldset>
-      <legend class="escolha">Escolha um Par de Temperaturas</legend>
+    <fieldset class="painel">
+      <legend class="legenda-escolha">Escolha um Par de Temperaturas</legend>
       <select id="par-temp" name="par-temp">
         <option value="C-F" selected>Celcius-Farenheit</option>
         <option value="F-C">Farenheit-Celcius</option>
@@ -27,13 +27,21 @@
         <option value="F-K">Farenheit-Kelvin</option>
       </select><br>
       <fieldset>
-        <label for="temperatura">Insira o valor</label><br>
-        <input type="number" id="valor-escolhido" size="2" /><br>
+        <label for="valor-escolhido">Insira o valor</label><br>
+        <input type="number" id="valor-escolhido" name="valor-escolhido" size="2" /><br>
         <button type="submit" onclick="Converter()">Converter</button>
         <h2 id="valorConvertido"></h2>
   
   </div>
-  <a href="https://alura.com.br/" target="_blank">
-    <img src="https://www.alura.com.br/assets/img/home/alura-logo.svg" alt="" class="alura-logo">
+  <div class="alura-links">
+    <a href="https://alura.com.br/" target="_blank">
+      <img src="https://www.alura.com.br/assets/img/home/alura-logo.svg" alt="" class="alura-logo">
+      </a>
+  </div>
+  <div class="mygithub-links">
+    <a href="https://github.com/tigrevictorduplat" target="_blank">
+      <img src="https://avatars.githubusercontent.com/u/98099656?v=4" alt="" class="mygithub-logo">
+      </a>
+  </div>
 </body>
 </html>

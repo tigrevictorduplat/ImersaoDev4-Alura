@@ -1,94 +1,94 @@
 body {
-    font-family: "Roboto", monospace;
-    min-height: 400px;
-    background-image: url("https://avatars.githubusercontent.com/u/98099656?v=4");
-    background-color: #a9d6e5;
-    background-size: 100vh;
-    background-position: center bottom;
-    background-repeat: no-repeat;
-  }
-  .container {
-    text-align: center;
-    padding: 20px;
-    height: 100vh;
-  }
-  .page-title {
-    border-radius: 8px;
-    background-color: #2a6f97;
-    color: #a9d6e5;
-    margin: 0 0 5px;
-  }
-  
-  .page-subtitle {
-    color: #014f86;
-    border-radius: 8px;
-    background-color: white;
-    margin-top: 5px;
-  }
-  .escolha {
-    color: white;
-    border-radius: 8px;
-    margin-top: 5px;
-  }
-  select {
-    position: relative;
-  }
-  .escolha::before {
-    content: "";
-    background-image: url(https://www.teahub.io/photos/full/35-350710_wallpaper-ice-patterns-frost-snow-frozen-ice-background.jpg);
-    background-size: cover;
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-    left: 0px;
-    opacity: 0.75;
-  }
-  
-  .page-logo {
-    width: 200px;
-    background-color: #89c2d9;
-    border-radius: 2px;
-  }
-  
-  .alura-logo {
-    width: 40px;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-  }
-  fieldset {
-    position: relative;
-    border-radius: 8px;
-    text-align: center;
-    width: auto;
-  }
-  
-  input {
-    margin: 12px;
-    padding: 6px;
-    border-radius: 5px;
-  }
-  
-  label,
-  legend {
-    color: #a9d6e5;
-    background-color: #61a5c2;
-    border-radius: 10px;
-  }
-  
-  button {
-    margin-top: 12px;
-    padding: 4px 8px;
-    border-radius: 10px;
-    background: #ffffff;
-    color: #012a4a;
-  }
-  
-  #valorConvertido {
-    color: #ffffff;
-    font-size: 30px;
-    border-radius: 12px;
-    background-color: #012a4a;
-  }
+  font-family: "Roboto", monospace;
+  min-height: 400px;
+  background-image: url("https://www.teahub.io/photos/full/35-350710_wallpaper-ice-patterns-frost-snow-frozen-ice-background.jpg");
+  background-color: #a9d6e5;
+  background-size: 100%;
+  background-position: cover;
+  background-repeat: no-repeat;
+}
+.container {
+  text-align: center;
+  padding: 20px;
+  height: 100vh;
+}
+.page-title {
+  border-radius: 8px;
+  background-color: #2a6f97;
+  color: #a9d6e5;
+  margin: 0 0 5px;
+}
+
+.page-subtitle {
+  color: #014f86;
+  border-radius: 8px;
+  background-color: white;
+  margin-top: 5px;
+}
+.legenda-escolha {
+  color: white;
+  border-radius: 8px;
+  margin-top: 5px;
+}
+select {
+  position: relative;
+}
+.painel {
+  border-radius: 2px;
+  background-color: rgba(255, 255, 255, 0.65);
+  background-size: 100%;
+}
+
+.page-logo {
+  width: 200px;
+  background-color: #89c2d9;
+  border-radius: 2px;
+}
+
+.alura-logo {
+  width: 40px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.mygithub-logo {
+  width: 40px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+fieldset {
+  position: relative;
+  border-radius: 8px;
+  text-align: center;
+  width: auto;
+}
+
+input {
+  margin: 12px;
+  padding: 6px;
+  border-radius: 5px;
+}
+
+label,
+legend {
+  color: #61a5c2;
+  background-color: #a9d6e5;
+  border-radius: 10px;
+}
+
+button {
+  margin-top: 12px;
+  padding: 4px 8px;
+  border-radius: 10px;
+  background: rgba(174, 213, 235, 0.75);
+  color: #012a4a;
+}
+
+#valorConvertido {
+  color: #ffffff;
+  font-size: 30px;
+  border-radius: 12px;
+  background-color: #012a4a;
+}
   
