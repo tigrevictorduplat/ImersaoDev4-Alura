@@ -12,22 +12,27 @@
     <title>TigerFlix</title>
 </head>
 <body>
-  <div class="container">
+  <header class="nav-bar">
+    <a href="https://alura.com.br/" target="_blank">
+      <img src="https://www.alura.com.br/assets/img/home/alura-logo.svg" alt="" class="alura-logo">
+    </a>
+    <img src="https://www.alura.com.br/assets/img/imersoes/dev-2021/logo-imersao-aluraflix.svg" class="page-logo" alt="">
+    <a href="https://github.com/tigrevictorduplat" target="_blank">
+      <img src="https://avatars.githubusercontent.com/u/98099656?v=4" alt="" class="mygithub-logo">
+    </a>
+  </header>
+  <main class="container">
     <h1 class="page-title">
       Aluraflix
     </h1>
-    <input id="display-text" class="input-text" type="text" placeholder="Adicione aqui as capas dos seus filmes favoritos_">
-    <input id="display-name" class="input-text" type="text" placeholder="Titulo do Filme">
+    <input id="display-text" class="input-text" type="text" placeholder="Adicione aqui as capas dos seus filmes favoritos_" required>
+    <input id="display-name" class="input-text" type="text" placeholder="Titulo do Filme_" required>
     <button class="button-submit" type="submit" onclick="adicionarBanner()">Adicionar</button>
     <div id="display-banner"></div>
     <div id="delete-field" hidden>
       <input id="input-delete" class="input-text" type="number" placeholder="N° do Filme">
       <button id="button-delete" class="button-submit" type="submit" onclick="deletarBanner()">excluir</button>
     </div>
-  </div>
-  <a href="https://alura.com.br/" target="_blank">
-    <img src="https://www.alura.com.br/assets/img/home/alura-logo.svg" alt="" class="alura-logo">
-  </a>
-  <img src="https://www.alura.com.br/assets/img/imersoes/dev-2021/logo-imersao-aluraflix.svg" class="page-logo" alt="">
+  </main>
 </body>
 </html>
